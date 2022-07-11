@@ -77,5 +77,6 @@ while cap.isOpened():
     if cv2.waitKey(1) == ord('q'):
         break
 
-
-    
+# 참고해 볼만한 영상
+# https://www.youtube.com/watch?v=udeQhZHx-00
+# https://www.youtube.com/watch?v=eHxDWhtbRCk

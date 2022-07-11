@@ -21,9 +21,13 @@ with mp_pose.Pose(
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         results = pose.process(image)
 
-        # 포즈 주석을 이미지 위에 그립니다.
+        # 포즈 주석을 이미지 위에 그림
         image.flags.writeable = True
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+        try:
+            landmarks = results.pose_landmarks.landmark
+        except:
+            pass
         mp_drawing.draw_landmarks(
             image,
             results.pose_landmarks,
